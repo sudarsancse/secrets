@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
     extended:true
 }));
 
-mongoose.connect("mongodb+srv://Admin-sudarsan:Test123@cluster0.7xvkxkf.mongodb.net/userDB");
+mongoose.connect(process.env.MONGODB); // mongodb connection link
 
 const userSchema = new mongoose.Schema({
     email : String,     // use capital S not small s
